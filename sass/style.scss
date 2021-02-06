@@ -3,11 +3,31 @@
 @import 'color';
 @import 'mixin';
 
-.menu{
-   background-color: #F1F2F6;
-   width: 400px;
-   height: 100vh;
+// GRID LAYOUT
 
+.layout-grid{
+   display: grid;
+   grid-gap: 20px;
+
+   grid-template-areas: 
+      "menu header header"
+      "menu graphics graphics"
+      "menu card card";
+
+   grid-template-columns: 350px 1fr;
+   grid-template-rows: 120px auto 200px;
+}
+
+.item{
+   // border: 1px solid red;
+   border-radius: 10px;
+}
+
+.menu{
+   grid-area: menu;
+   display: grid;
+
+   background-color: #F1F2F6;
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -51,7 +71,137 @@
    }
 }
 
-// SEARCH BAR
+// HEADER
+
+.header{   
+   display: flex;
+   align-items: center;
+   grid-area: header; 
+  
+}
+
+.header-flex{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.perfil{
+   display: flex;
+   align-items: center;
+
+   .circle-1{
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: #ccc;
+   }
+
+   .circle-2{
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: #ccc;
+      margin-left: 30px; 
+   }
+
+   .photo{
+      img{
+         width: 65px;
+         height: 70px;    
+         border-radius: 20px;    
+         margin-left: 30px; 
+      }
+   }
+}
+
+// GRAPHICS
+
+.graphics{
+   grid-area: graphics;
+   display: flex;
+   align-items: center;
+}
+
+.graphics-flex{
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-gap: 20px;
+
+   grid-template-areas: 
+   "box1 box2 circle"
+   "box3 box4 bar";
+}
+
+.box1{
+   grid-area: box1;
+   
+   background-color: #F1F2F6;
+   box-shadow: 5px 5px 12px rgb(216, 225, 255);
+}
+
+.box2{
+   grid-area: box2;
+   background-color: #F1F2F6;
+   box-shadow: 5px 5px 12px rgb(216, 225, 255);
+}
+
+.box3{
+   grid-area: box3;
+   background-color: #F1F2F6;
+   box-shadow: 5px 5px 12px rgb(216, 225, 255);
+}
+
+.box4{
+   grid-area: box4;
+   background-color: #F1F2F6;
+   box-shadow: 5px 5px 12px rgb(216, 225, 255);
+}
+
+.graphic-circle{
+   grid-area: circle;
+   max-width: 300px;
+   background-color: #F1F2F6;
+   box-shadow: 5px 5px 12px rgb(216, 225, 255);
+}
+
+.graphic-bar{
+   grid-area: bar;
+   max-width: 300px;
+   background-color: #F1F2F6;
+   box-shadow: 5px 5px 12px rgb(216, 225, 255);
+}
+
+// CARD
+
+.card-info{
+   grid-area: card;
+   display: flex;
+   align-items: center;
+}
+
+.card-flex{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   text-align: justify;
+   gap: 100px;
+}
+
+.card{
+   padding: 20px;
+   background-color: #F1F2F6;
+   // border-radius: 20px;
+   box-shadow: 5px 5px 12px rgb(216, 225, 255),
+   2px 2px 5px #ccc;
+   color: rgb(117, 117, 117);
+
+   h3{
+      color: #D478FF;
+      font-weight: 500;
+      padding-bottom: 15px 0;
+   }
+}
 
 
 
