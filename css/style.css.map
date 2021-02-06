@@ -1,0 +1,13 @@
+{
+    "version": 3,
+    "mappings": "ACSA,OAAO,CAAC,uGAAI,CATZ,AAAA,CAAC,AAAA,CACE,MAAM,CAAE,CAAC,CACT,OAAO,CAAE,CAAC,CACV,OAAO,CAAE,IAAI,CACb,UAAU,CAAE,IAAI,CAChB,eAAe,CAAE,IAAI,CACrB,UAAU,CAAE,UAAU,CACxB,AAID,AAAA,IAAI,AAAC,CACH,WAAW,CAAE,qBAAqB,CAClC,UAAU,CAAE,OAAO,CACpB",
+    "sources": [
+        "../sass/style.scss",
+        "../sass/_reset.scss",
+        "../sass/_shadow.scss",
+        "../sass/_color.scss",
+        "../sass/_mixin.scss"
+    ],
+    "names": [],
+    "file": "style.css"
+}
