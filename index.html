@@ -4,17 +4,65 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script src="https://kit.fontawesome.com/e6b1f34d6c.js" crossorigin="anonymous"></script>
    <link rel="stylesheet" href="css/style.css">
    <link rel="stylesheet" href="css/Chart.css">
    <title>Dashboard</title>
 </head>
 <body>
 
-<div class="container">
-   <canvas id="myChart" width="100px" height="100px"></canvas>
-   <canvas id="myCharLine" width="100px" height="100px"></canvas>
-   <canvas id="myCharBar" width="100px" height="100px"></canvas>
-</div>
+<main class="layout-grid">
+      <!-- NAV -->
+
+      <nav class="menu item">
+         <a href="#">Logomarca</a>
+         <ul>
+            <li class="actived"><a href="#"><i class="fas fa-home"></i> Dashboard</a></li>
+            <li><a href="#"><i class="fas fa-shopping-cart"></i> Products</a></li>
+            <li><a href="#"><i class="fas fa-user-alt"></i> Clients</a></li>
+            <li><a href="#"><i class="fas fa-envelope-square"></i> Chat</a></li>
+         </ul>
+      </nav>
+   
+      <!-- SEARCH BAR -->
+   
+      <header class="header item">
+         <div class="input-section">
+            <input type="search" name="" id="">
+            <input type="submit">
+         </div>
+
+         <div class="perfil">
+            <div class="circle-1"></div>
+            <div class="circle-2"></div>
+         </div>
+      </header>
+
+      <!-- INFO GRAPHICS -->
+
+      <section class="info-graphics item">
+         
+      </section>
+
+      <!-- GRAPHICS -->
+
+      <section class="graphics item">
+         <div class="graphic-circle">
+            <!-- <canvas id="myChart" width="100px" height="100px"></canvas> -->
+         </div>
+         <div class="graphic-bar">
+            <!-- <canvas id="myCharBar" width="100px" height="100px"></canvas>  -->
+         </div>
+      </section>
+
+      <!-- CARDS -->
+
+      <section class="card-info item">
+         <div class="card-1"></div>
+         <div class="card-2"></div>
+         <div class="card-3"></div>
+      </section>
+</main>
 
    <script src="js/Chart.js"></script>
    <script type="module" src="js/script.js"></script>
