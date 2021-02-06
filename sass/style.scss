@@ -1,6 +1,4 @@
 @import 'reset';
-@import 'shadow';
-@import 'color';
 @import 'mixin';
 
 // GRID LAYOUT
@@ -20,18 +18,16 @@
 
 .item{
    // border: 1px solid red;
-   border-radius: 10px;
 }
 
 .menu{
    grid-area: menu;
    display: grid;
-
-   background-color: #F1F2F6;
+   
    display: flex;
    flex-direction: column;
    align-items: center;
-   box-shadow: 5px 5px 22px rgb(216, 225, 255);
+
 
    a{
       font-size: 2.5em;
@@ -77,7 +73,6 @@
    display: flex;
    align-items: center;
    grid-area: header; 
-  
 }
 
 .header-flex{
@@ -111,6 +106,7 @@
          height: 70px;    
          border-radius: 20px;    
          margin-left: 30px; 
+         cursor: pointer;
       }
    }
 }
@@ -126,7 +122,7 @@
 .graphics-flex{
    display: grid;
    grid-template-columns: 1fr 1fr;
-   grid-gap: 20px;
+   grid-gap: 40px;
 
    grid-template-areas: 
    "box1 box2 circle"
@@ -135,41 +131,35 @@
 
 .box1{
    grid-area: box1;
+   @include boxShadow;
    
-   background-color: #F1F2F6;
-   box-shadow: 5px 5px 12px rgb(216, 225, 255);
 }
 
 .box2{
    grid-area: box2;
-   background-color: #F1F2F6;
-   box-shadow: 5px 5px 12px rgb(216, 225, 255);
+   @include boxShadow;
 }
 
 .box3{
    grid-area: box3;
-   background-color: #F1F2F6;
-   box-shadow: 5px 5px 12px rgb(216, 225, 255);
+   @include boxShadow;
 }
 
 .box4{
    grid-area: box4;
-   background-color: #F1F2F6;
-   box-shadow: 5px 5px 12px rgb(216, 225, 255);
+   @include boxShadow;
 }
 
 .graphic-circle{
    grid-area: circle;
-   max-width: 300px;
-   background-color: #F1F2F6;
-   box-shadow: 5px 5px 12px rgb(216, 225, 255);
+   @include boxShadow;
+   @include graphicStyle;
 }
 
 .graphic-bar{
    grid-area: bar;
-   max-width: 300px;
-   background-color: #F1F2F6;
-   box-shadow: 5px 5px 12px rgb(216, 225, 255);
+   @include boxShadow;
+   @include graphicStyle;
 }
 
 // CARD
@@ -178,6 +168,7 @@
    grid-area: card;
    display: flex;
    align-items: center;
+   @include boxShadow;
 }
 
 .card-flex{
@@ -190,12 +181,7 @@
 
 .card{
    padding: 20px;
-   background-color: #F1F2F6;
-   // border-radius: 20px;
-   box-shadow: 5px 5px 12px rgb(216, 225, 255),
-   2px 2px 5px #ccc;
-   color: rgb(117, 117, 117);
-
+   border: 1px solid #ccc;
    h3{
       color: #D478FF;
       font-weight: 500;

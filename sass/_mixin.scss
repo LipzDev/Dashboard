@@ -1,0 +1,12 @@
+@mixin graphicStyle{
+   max-width: 300px;  
+   padding: 20px;
+}
+
+@mixin boxShadow{
+   background-color: #F1F2F6;
+   box-shadow: 2px 2px 5px rgb(255, 255, 255),
+   inset 2px 2px 5px rgb(237, 246, 255);
+   color: rgb(117, 117, 117);
+   border-radius: 10px;
+}

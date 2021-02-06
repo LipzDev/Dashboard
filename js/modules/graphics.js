@@ -33,7 +33,7 @@ var myChart = new Chart(ctx, {
        labels: ['Blue', 'Pink', 'Yellow'],
        datasets: [{
            label: 'Graphic',
-           data: [12, 19, 3],
+           data: [12,1,7.5],
            backgroundColor: [
             'rgba(54, 162, 235, 1)',
             'rgba(255, 99, 132, 1)',
