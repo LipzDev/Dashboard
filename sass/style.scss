@@ -16,10 +16,6 @@
    grid-template-rows: 120px auto 200px;
 }
 
-.item{
-   // border: 1px solid red;
-}
-
 .menu{
    grid-area: menu;
    display: grid;
@@ -49,7 +45,7 @@
 }
 
 .menu li a{
-   font-size: 1.6em;
+   font-size: 1.3em;
    color: rgb(163, 163, 163);
    font-weight: 300;
    padding: 15px 30px;
@@ -57,9 +53,8 @@
 }
 
 .actived{
-   box-shadow: inset 2px 2px 6px #ccc,
-   inset -5px -5px 6px white;
-   border-radius: 20px;
+   @include boxShadow;
+   border-radius: 10px;
 
    a{
       font-weight: 500!important;
@@ -81,23 +76,46 @@
    align-items: center;
 }
 
+.input-section{
+   position: relative;
+
+   input{
+      width: 300px;
+      padding: 10px;
+      border-radius: 20px;
+      border: 0;
+
+      @include boxShadow;
+   }
+
+   button{
+      border-radius: 10px;
+      width: 50px;
+      padding: 10px 0;
+      position: absolute;
+      right: 0;
+      top: -1.0px;
+      border: 0;
+      cursor: pointer;
+      color: #D478FF;
+      font-weight: bold;
+
+      background-color: #F1F2F6;
+      box-shadow:  2px 2px 6px #ccc,
+       -3px -5px 6px white;
+   }
+}
+
 .perfil{
    display: flex;
    align-items: center;
 
    .circle-1{
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      background: #ccc;
+      @include buttonIcon;
    }
 
    .circle-2{
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      background: #ccc;
-      margin-left: 30px; 
+      @include buttonIcon;
    }
 
    .photo{
@@ -107,6 +125,10 @@
          border-radius: 20px;    
          margin-left: 30px; 
          cursor: pointer;
+
+         background-color: #F1F2F6;
+         box-shadow:  2px 2px 6px #ccc,
+         -3px -5px 6px white;
       }
    }
 }
@@ -132,22 +154,25 @@
 .box1{
    grid-area: box1;
    @include boxShadow;
-   
+  @include boxWidth;
 }
 
 .box2{
    grid-area: box2;
    @include boxShadow;
+   @include boxWidth;
 }
 
 .box3{
    grid-area: box3;
    @include boxShadow;
+   @include boxWidth;
 }
 
 .box4{
    grid-area: box4;
    @include boxShadow;
+   @include boxWidth;
 }
 
 .graphic-circle{
@@ -168,24 +193,37 @@
    grid-area: card;
    display: flex;
    align-items: center;
-   @include boxShadow;
 }
 
 .card-flex{
    display: flex;
    align-items: center;
-   justify-content: space-between;
-   text-align: justify;
+   justify-content: space-around;
    gap: 100px;
 }
 
 .card{
    padding: 20px;
-   border: 1px solid #ccc;
+   border-radius: 10px;
+   display: flex;
+   align-items: center;
+   @include boxShadow;
+
    h3{
       color: #D478FF;
       font-weight: 500;
       padding-bottom: 15px 0;
+   }
+
+   .card-text{
+      max-width: 250px;
+   }
+
+   .icon{
+      margin-left: 10px;
+      padding: 20px 25px;
+      @include buttons;
+      cursor: pointer;
    }
 }
 
