@@ -1,7 +1,6 @@
+@import 'color';
 @import 'reset';
 @import 'mixin';
-@import 'color';
-
 
 // GRID LAYOUT
 
@@ -23,12 +22,12 @@
    display: flex;
    flex-direction: column;
    align-items: center;
-   border-right: 1px solid #ccc;
+   border-right: 1px solid var(--cor-sombra-cinza);
 
 
    a{
       font-size: 2.5em;
-      color: #D478FF;
+      color: var(--cor-texto-roxo);
       margin-top: 30px;
    }
 
@@ -47,7 +46,7 @@
 
 .menu li a{
    font-size: 1.3em;
-   color: rgb(163, 163, 163);
+   color: var(--cor-texto-cinza);
    font-weight: 300;
    padding: 15px 30px;
    display: block;
@@ -59,12 +58,13 @@
 
    a{
       font-weight: 500!important;
-      color: rgb(83, 86, 90)!important;
+      color: var(--cor-texto-hover)!important;
    }
 }
 
 .dark-theme{
    i{
+      transform: 0.4s;
       @include buttonStyle1;
    }   
 }
@@ -102,12 +102,12 @@
       top: 2px;
       border: 0;
       cursor: pointer;
-      color: #D478FF;
+      color: var(--cor-texto-roxo);
       font-weight: bold;
 
-      background-color: #F1F2F6;
-      box-shadow:  2px 2px 6px #ccc,
-       -3px -5px 6px white;
+      background-color: var(--cor-bg-branco);
+      box-shadow:  2px 2px 6px var(--cor-sombra-cinza),
+       -3px -5px 6px var(--cor-sombra-branco);
    }
 }
 
@@ -131,16 +131,16 @@
          margin-left: 30px; 
          cursor: pointer;
 
-         background-color: #F1F2F6;
-         box-shadow:  2px 2px 6px #ccc,
-         -3px -5px 6px white;
+         background-color: var(--cor-bg-branco);
+         box-shadow:  2px 2px 6px var(--cor-sombra-cinza),
+         -3px -5px 6px var(--cor-sombra-branco);  
       }
    }
 
    .logout{
       margin-left: 20px;
       a{
-         color: #D478FF;
+         color: var(--cor-texto-roxo);
       }
    }
 }
@@ -214,7 +214,7 @@
    @include boxShadow;
 
    h3{
-      color: #D478FF;
+      color: var(--cor-texto-roxo);
       font-weight: 500;
       padding-bottom: 15px 0;
    }
@@ -228,6 +228,10 @@
       padding: 15px 20px;
       @include buttonStyle2;
       cursor: pointer;
+   }
+
+   p{
+      font-weight: 300;
    }
 }
 
@@ -239,7 +243,7 @@
    @include boxShadow;
 
    h3{
-      color: #D478FF;
+      color: var(--cor-texto-roxo);
       font-weight: 500;
       padding-bottom: 15px 0;
    }
@@ -253,6 +257,10 @@
       padding: 15px 20px;
       @include buttonStyle2;
       cursor: pointer;
+   }
+
+   p{
+      font-weight: 300;
    }
 }
 
@@ -265,7 +273,7 @@
    margin-bottom: 20px;
 
    h3{
-      color: #D478FF;
+      color: var(--cor-texto-roxo);
       font-weight: 500;
       padding-bottom: 15px 0;
    }
@@ -279,6 +287,10 @@
       padding: 15px 20px;
       @include buttonStyle2;
       cursor: pointer;
+   }
+
+   p{
+      font-weight: 300;
    }
 }
 

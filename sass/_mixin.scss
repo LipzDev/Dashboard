@@ -1,8 +1,8 @@
 @mixin boxShadow{
-   background-color: #F1F2F6;
-   box-shadow: inset 2px 2px 6px #ccc,
-   inset -5px -5px 6px white;
-   color: rgb(117, 117, 117);
+   background-color: var(--cor-bg-branco);
+   box-shadow: inset 2px 2px 6px var(--cor-sombra-cinza),
+   inset -5px -5px 6px var(--cor-sombra-branco);;
+   color: var(--cor-texto-cinza);
    border-radius: 10px;
 }
 
@@ -16,18 +16,18 @@
    justify-content: center;
    margin-left: 20px;
    cursor: pointer;
-   color: rgb(117, 117, 117);
+   color: var(--cor-texto-cinza);
 
-   background-color: #F1F2F6;
-   box-shadow:  2px 2px 6px #ccc,
-   -3px -5px 6px white;
+   background-color: var(--cor-fundo-branco);
+   box-shadow:  2px 2px 6px var(--cor-sombra-cinza),
+   -3px -5px 6px var(--cor-sombra-branco);
 }
 
 @mixin  buttonStyle2{
-   background-color: #F1F2F6;
-   box-shadow:  2px 2px 6px #ccc,
-   -3px -5px 6px white;
-   color: rgb(117, 117, 117);
+   background-color: var(--cor-fundo-branco);
+   box-shadow:  2px 2px 6px var(--cor-sombra-cinza),
+   -3px -5px 6px var(--cor-sombra-branco);
+   color: var(--cor-texto-cinza);
    border-radius: 10px;
 }
 
