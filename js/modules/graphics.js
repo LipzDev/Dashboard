@@ -58,7 +58,7 @@ var myChart = new Chart(ctx, {
    data: {
        labels: ['Blue', 'Pink', 'Yellow'],
        datasets: [{
-           label: 'Graphic',
+           label: 'Graphic 1',
            data: [12,1,7.5],
            backgroundColor: [
             'rgba(54, 162, 235, 1)',
@@ -83,16 +83,16 @@ var myChart = new Chart(ctx, {
    data: {
        labels: ['Blue', 'Pink', 'Yellow'],
        datasets: [{
-           label: 'Graphic',
+           label: 'Graphic 2',
            data: [12,1,7.5],
            backgroundColor: [
-            'rgba(54, 162, 235, 1)',
             'rgba(255, 99, 132, 1)',
+            'rgba(54, 162, 235, 1)',
             'rgba(255, 206, 86, 1)'
         ],
            borderColor: [
-            'rgba(54, 162, 235, 1)',
             'rgba(255, 99, 132, 1)',
+            'rgba(54, 162, 235, 1)',
             'rgba(255, 206, 86, 1)'            
            ],
            borderWidth: 1
@@ -108,17 +108,18 @@ var myChart = new Chart(ctx, {
    data: {
        labels: ['Blue', 'Pink', 'Yellow'],
        datasets: [{
-           label: 'Graphic',
+           label: 'Graphic 3',
            data: [12,1,7.5],
            backgroundColor: [
+            'rgba(255, 206, 86, 1)',
             'rgba(54, 162, 235, 1)',
-            'rgba(255, 99, 132, 1)',
-            'rgba(255, 206, 86, 1)'
+            'rgba(255, 99, 132, 1)'
+            
         ],
            borderColor: [
+            'rgba(255, 206, 86, 1)',
             'rgba(54, 162, 235, 1)',
-            'rgba(255, 99, 132, 1)',
-            'rgba(255, 206, 86, 1)'            
+            'rgba(255, 99, 132, 1)'            
            ],
            borderWidth: 1
        }]
@@ -133,12 +134,12 @@ var myChart = new Chart(ctx, {
    data: {
        labels: ['Blue', 'Pink', 'Yellow'],
        datasets: [{
-           label: 'Graphic',
+           label: 'Graphic 4',
            data: [12,1,7.5],
            backgroundColor: [
-            'rgba(54, 162, 235, 1)',
-            'rgba(255, 99, 132, 1)',
-            'rgba(255, 206, 86, 1)'
+            'rgba(54, 162, 235, 0)',
+            'rgba(255, 99, 132, 0)',
+            'rgba(255, 206, 86, 0)'
         ],
            borderColor: [
             'rgba(54, 162, 235, 1)',

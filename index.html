@@ -20,7 +20,7 @@
             <li class="actived"><a href="#"><i class="fas fa-home"></i> Dashboard</a></li>
             <li><a href="#"><i class="fas fa-shopping-cart"></i> Products</a></li>
             <li><a href="#"><i class="fas fa-user-alt"></i> Clients</a></li>
-            <li><a href="#"><i class="fas fa-envelope-square"></i> Chat</a></li>
+            <li><a href="#"><i class="fas fa-envelope-open-text"></i> Chat</a></li>
          </ul>
       </nav>
    
@@ -35,16 +35,25 @@
                   <button><i class="fas fa-chevron-right"></i></button>
                </div>
       
-               <div class="perfil">
+               <div class="perfil">                  
                   <div class="circle-1">
                      <i class="far fa-bell"></i>
                   </div>
+                  
                   <div class="circle-2">
                      <i class="far fa-comments"></i>
+                  </div>
+
+                  <div class="dark-theme">
+                     <i class="fas fa-moon"></i>
                   </div>
       
                   <div class="photo">
                      <img src="img/foto.png" alt="" srcset="">
+                  </div>
+
+                  <div class="logout">
+                     <a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
                   </div>
       
                </div>
@@ -58,91 +67,71 @@
       <section class="graphics">
          <div class="container">
 
-            <div class="graphics-flex">
+            <div class="graphics-grid">
 
                <div class="box1 ">
-                  <canvas id="myChartLine" width="600px" height="300px"></canvas>
+                  <canvas id="myChartLine" width="" height=""></canvas>
                </div>
 
                <div class="box2 ">
-                  <canvas id="myChartLine2" width="600px" height="300px"></canvas>
+                  <canvas id="myChartLine2" width="" height=""></canvas>
                </div>
 
                <div class="box3 ">
-                  <canvas id="myChartLine3" width="600px" height="300px"></canvas>
+                  <canvas id="myChartLine3" width="" height=""></canvas>
                </div>
 
                <div class="box4 ">
-                  <canvas id="myChartLine4" width="600px" height="300px"></canvas>
+                  <canvas id="myChartLine4" width="" height=""></canvas>
                </div>
 
                <div class="graphic-circle ">
-                  <canvas id="myChart" width="300px" height="300px"></canvas>
+                  <canvas id="myChart" width="" height=""></canvas>
                </div>
 
                <div class="graphic-bar ">
-                  <canvas id="myCharBar" width="300px" height="300px"></canvas> 
+                  <canvas id="myCharBar" width="" height=""></canvas> 
                </div>
+
+               <!-- CARD -->
+
+               <div class="card-1">
+                  <div class="card-text">
+                     <h3>Lorem ipsum</h3>
+                     <p>Mussum Ipsum, cacilds vidis.</p>
+                  </div>
+
+                  <div class="icon">
+                     <i class="fas fa-wrench"></i>
+                  </div>
+               </div>
+               
+               <div class="card-2">
+                  <div class="card-text">
+                     <h3>R$ 1345,00</h3>
+                     <p>Mussum Ipsum, cacilds vidis.</p>
+                  </div>
+
+                  <div class="icon">
+                     <i class="fas fa-align-left"></i>
+                  </div>
+               </div> 
+
+               <div class="card-3">
+                  <div class="card-text">
+                     <h3>Lorem ipsum</h3>
+                     <p>Mussum Ipsum, cacilds vidis.</p>
+                  </div>
+
+                  <div class="icon">
+                     <i class="fas fa-sliders-h"></i>
+                  </div>
+               </div> 
 
             </div>
 
          </div>
-      </section>
-
-      <!-- CARDS -->
-
-      <section class="card-info">
-          <div class="container">
-
-            <div class="card-flex">
-               <div class="card">
-                  <div class="card-text">
-                     <h3>Lorem ipsum</h3>
-                     <p>Mussum Ipsum, cacilds vidis.</p>
-                  </div>
-
-                  <div class="icon">
-                     <i class="fas fa-sliders-h"></i>
-                  </div>
-               </div>  
-               
-               <div class="card">
-                  <div class="card-text">
-                     <h3>Lorem ipsum</h3>
-                     <p>Mussum Ipsum, cacilds vidis.</p>
-                  </div>
-
-                  <div class="icon">
-                     <i class="fas fa-sliders-h"></i>
-                  </div>
-               </div>
-
-               <div class="card">
-                  <div class="card-text">
-                     <h3>Lorem ipsum</h3>
-                     <p>Mussum Ipsum, cacilds vidis.</p>
-                  </div>
-
-                  <div class="icon">
-                     <i class="fas fa-sliders-h"></i>
-                  </div>
-               </div>
-
-               <div class="card">
-                  <div class="card-text">
-                     <h3>Lorem ipsum</h3>
-                     <p>Mussum Ipsum, cacilds vidis.</p>
-                  </div>
-
-                  <div class="icon">
-                     <i class="fas fa-sliders-h"></i>
-                  </div>
-               </div>
-               
-            </div>
-
-          </div>
-      </section>
+      </section>     
 </main>
 
    <script src="js/Chart.js"></script>

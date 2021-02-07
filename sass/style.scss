@@ -1,19 +1,19 @@
 @import 'reset';
 @import 'mixin';
+@import 'color';
+
 
 // GRID LAYOUT
 
 .layout-grid{
    display: grid;
-   grid-gap: 20px;
 
    grid-template-areas: 
-      "menu header header"
-      "menu graphics graphics"
-      "menu card card";
+      "menu header header header"
+      "menu graphics graphics graphics";
 
-   grid-template-columns: 350px 1fr;
-   grid-template-rows: 120px auto 200px;
+      grid-template-columns: 350px 1fr 1fr auto;
+      grid-template-rows: 120px auto;
 }
 
 .menu{
@@ -23,6 +23,7 @@
    display: flex;
    flex-direction: column;
    align-items: center;
+   border-right: 1px solid #ccc;
 
 
    a{
@@ -62,6 +63,12 @@
    }
 }
 
+.dark-theme{
+   i{
+      @include buttonStyle1;
+   }   
+}
+
 // HEADER
 
 .header{   
@@ -71,30 +78,28 @@
 }
 
 .header-flex{
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
+   @include displayFlex;
 }
 
 .input-section{
    position: relative;
 
    input{
-      width: 300px;
-      padding: 10px;
+      width: 350px;
+      padding: 15px;
       border-radius: 20px;
       border: 0;
-
+      font-family: 'poppins', 'sans-serif';
       @include boxShadow;
    }
 
    button{
       border-radius: 10px;
       width: 50px;
-      padding: 10px 0;
+      padding: 15px 0;
       position: absolute;
-      right: 0;
-      top: -1.0px;
+      right: 2px;
+      top: 2px;
       border: 0;
       cursor: pointer;
       color: #D478FF;
@@ -111,11 +116,11 @@
    align-items: center;
 
    .circle-1{
-      @include buttonIcon;
+      @include buttonStyle1;
    }
 
    .circle-2{
-      @include buttonIcon;
+      @include buttonStyle1;
    }
 
    .photo{
@@ -131,6 +136,13 @@
          -3px -5px 6px white;
       }
    }
+
+   .logout{
+      margin-left: 20px;
+      a{
+         color: #D478FF;
+      }
+   }
 }
 
 // GRAPHICS
@@ -141,14 +153,17 @@
    align-items: center;
 }
 
-.graphics-flex{
+.graphics-grid{
    display: grid;
-   grid-template-columns: 1fr 1fr;
-   grid-gap: 40px;
 
    grid-template-areas: 
    "box1 box2 circle"
-   "box3 box4 bar";
+   "box3 box4 bar"
+   "card-1 card-1 card-2"
+   "card-1 card-1 card-2"
+   "card-3 card-3 card-3";
+
+   grid-gap: 20px;
 }
 
 .box1{
@@ -178,35 +193,24 @@
 .graphic-circle{
    grid-area: circle;
    @include boxShadow;
-   @include graphicStyle;
+   width: 620px;  
+   padding: 20px;
 }
 
 .graphic-bar{
    grid-area: bar;
    @include boxShadow;
-   @include graphicStyle;
+   width: 620px;  
+   padding: 20px;
 }
 
 // CARD
 
-.card-info{
-   grid-area: card;
-   display: flex;
-   align-items: center;
-}
-
-.card-flex{
-   display: flex;
-   align-items: center;
-   justify-content: space-around;
-   gap: 100px;
-}
-
-.card{
+.card-1{
+   grid-area: card-1;
    padding: 20px;
    border-radius: 10px;
-   display: flex;
-   align-items: center;
+   @include displayFlex;
    @include boxShadow;
 
    h3{
@@ -220,9 +224,60 @@
    }
 
    .icon{
-      margin-left: 10px;
-      padding: 20px 25px;
-      @include buttons;
+      margin-left: 30px;
+      padding: 15px 20px;
+      @include buttonStyle2;
+      cursor: pointer;
+   }
+}
+
+.card-2{
+   grid-area: card-2;
+   padding: 20px;
+   border-radius: 10px;
+   @include displayFlex;
+   @include boxShadow;
+
+   h3{
+      color: #D478FF;
+      font-weight: 500;
+      padding-bottom: 15px 0;
+   }
+
+   .card-text{
+      max-width: 250px;
+   }
+
+   .icon{
+      margin-left: 30px;
+      padding: 15px 20px;
+      @include buttonStyle2;
+      cursor: pointer;
+   }
+}
+
+.card-3{
+   grid-area: card-3;
+   padding: 20px;
+   border-radius: 10px;
+   @include displayFlex;
+   @include boxShadow;
+   margin-bottom: 20px;
+
+   h3{
+      color: #D478FF;
+      font-weight: 500;
+      padding-bottom: 15px 0;
+   }
+
+   .card-text{
+      max-width: 250px;
+   }
+
+   .icon{
+      margin-left: 30px;
+      padding: 15px 20px;
+      @include buttonStyle2;
       cursor: pointer;
    }
 }
