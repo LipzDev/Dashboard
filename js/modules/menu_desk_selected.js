@@ -1,5 +1,5 @@
 export default function initSelectedMenu(){
-   let menu = document.querySelectorAll('.menu li');
+   let menu = document.querySelectorAll('.menu-desktop li');
 
    menu.forEach((item) => {
       item.addEventListener('click', function(){

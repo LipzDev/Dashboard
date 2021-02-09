@@ -146,7 +146,7 @@ var myChart = new Chart(ctx, {
             'rgba(255, 99, 132, 1)',
             'rgba(255, 206, 86, 1)'            
            ],
-           borderWidth: 1
+           borderWidth: 3
        }]
    },  
 });

@@ -1,0 +1,199 @@
+// NOTEBOOK
+@media screen and (max-width: 1600px){
+   .menu-desktop{      
+      a{
+         font-size: 150%;
+      }
+   }
+
+   .menu-desktop li a{
+      font-size: 100%;
+   }
+
+   // GRAPHICS
+
+   .graphics-grid{
+      display: grid;
+     
+      grid-gap: 10px;      
+      grid-template-columns: 30% 30%;
+   }
+}
+
+
+// TABLET
+@media screen and (max-width: 1024px){
+   // REMOVIDOS DO CÓDIGO
+
+   .logout{
+      display: none;
+   }
+
+   .input-section{
+      display: none;
+   }
+
+   // CONTAINER
+
+   .container{
+      max-width: 600px;
+      width: 95%;
+   }
+
+   // MENU
+
+   .menu-desktop{
+      display: none;
+   }
+
+   // GRID
+
+   .layout-grid{
+      display: grid;
+   
+      grid-template-areas: 
+         "header header"
+         "graphics graphics";
+   
+         grid-template-columns: 1fr;
+         grid-template-rows: 120px 1fr;
+
+   }
+
+   // GRID DO MEIO
+
+   .graphics-grid{
+      display: grid;
+   
+      grid-template-areas: 
+      "circle"
+      "bar"
+      "box1"
+      "box2"
+      "box3"
+      "box4"
+      "card-1"
+      "card-2"
+      "card-3";
+   
+      grid-gap: 20px;      
+      grid-template-columns: 100%;
+   }
+
+   // ESTILOS
+
+   .input-section{
+      display: block;
+
+      input{
+         max-width: 250px;
+      }
+   }
+
+   .perfil{
+      .circle-1{
+         @include buttonStyle1;
+         margin: 0;
+      }   
+   }
+   
+}
+
+
+
+// MOBILE
+@media screen and (max-width: 500px){
+   // REMOVIDOS DO CÓDIGO
+
+   .logout{
+      display: none;
+   }
+
+   .input-section{
+      display: none;
+   }
+
+   // CONTAINER
+
+   .container{
+      max-width: 300px;
+      width: initial;
+   }
+
+   // MENU
+
+   .menu-desktop{
+      display: none;
+   }
+
+   .menu-mobile{
+      width: 25vw;
+      height: 100vh;
+      z-index: 9999;
+      background-color: red;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      position: absolute;
+      left: 0;
+      top: 0;      
+
+      transition: 0.5s;
+      left: -200rem;
+      opacity: 0;
+      visibility: hidden;
+
+      &.menu-m-active{
+         left: 0rem;
+         opacity: 1;
+         visibility: visible;
+      }
+   }
+
+   // GRID
+
+   .layout-grid{
+      display: grid;
+   
+      grid-template-areas: 
+         "header header"
+         "graphics graphics";
+   
+         grid-template-columns: 1fr;
+         grid-template-rows: 120px 1fr;
+
+   }
+
+   // GRID DO MEIO
+
+   .graphics-grid{
+      display: grid;
+   
+      grid-template-areas: 
+      "circle"
+      "bar"
+      "box1"
+      "box2"
+      "box3"
+      "box4"
+      "card-1"
+      "card-2"
+      "card-3";
+   
+      grid-gap: 20px;      
+      grid-template-columns: 100%;
+   }
+
+   // ESTILOS
+
+   .perfil{
+      .circle-1{
+         @include buttonStyle1;
+         margin: 0;
+      }   
+   }
+   
+}

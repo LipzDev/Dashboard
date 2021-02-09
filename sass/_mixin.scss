@@ -31,16 +31,10 @@
    border-radius: 10px;
 }
 
-@mixin boxWidth {
-   max-width: 520px;  
-   padding: 20px;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-}
-
 @mixin displayFlex {
    display: flex;
    align-items: center;
    justify-content: space-between;
 }
+
+// MIXINS MOBILE

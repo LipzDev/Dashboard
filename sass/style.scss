@@ -4,18 +4,22 @@
 
 // GRID LAYOUT
 
+.item{
+   // border: 2px solid red;
+}
+
 .layout-grid{
    display: grid;
 
    grid-template-areas: 
-      "menu header header header"
-      "menu graphics graphics graphics";
+      "menu header"
+      "menu graphics";
 
-      grid-template-columns: 350px 1fr 1fr auto;
+      grid-template-columns: 15% auto;
       grid-template-rows: 120px auto;
 }
 
-.menu{
+.menu-desktop{
    grid-area: menu;
    display: grid;
    
@@ -44,7 +48,7 @@
    }
 }
 
-.menu li a{
+.menu-desktop li a{
    font-size: 1.3em;
    color: var(--cor-texto-cinza);
    font-weight: 300;
@@ -72,9 +76,9 @@
 // HEADER
 
 .header{   
-   display: flex;
-   align-items: center;
    grid-area: header; 
+   display: flex;
+   align-items: center;   
 }
 
 .header-flex{
@@ -164,44 +168,68 @@
    "card-3 card-3 card-3";
 
    grid-gap: 20px;
+   
+   grid-template-columns: 30% 30% auto;
 }
 
 .box1{
    grid-area: box1;
+   max-width: 100%;  
+   padding: 20px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
    @include boxShadow;
-  @include boxWidth;
 }
 
 .box2{
    grid-area: box2;
+   max-width: 100%;  
+   padding: 20px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
    @include boxShadow;
-   @include boxWidth;
 }
 
 .box3{
    grid-area: box3;
+   max-width: 100%;  
+   padding: 20px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
    @include boxShadow;
-   @include boxWidth;
 }
 
 .box4{
    grid-area: box4;
+   max-width: 100%;  
+   padding: 20px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
    @include boxShadow;
-   @include boxWidth;
 }
 
 .graphic-circle{
    grid-area: circle;
    @include boxShadow;
-   width: 620px;  
+   max-width: 100%;  
    padding: 20px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
 }
 
 .graphic-bar{
    grid-area: bar;
    @include boxShadow;
-   width: 620px;  
+   max-width: 100%;  
    padding: 20px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
 }
 
 // CARD
@@ -294,7 +322,7 @@
    }
 }
 
-
+@import 'responsive';
 
 
 
